@@ -16,6 +16,8 @@ BuildRequires: perl-devel
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(File::Spec)
 BuildRequires: perl(Test::More)
+BuildRequires: x11-server-xvfb
+Requires: x11-server-xvfb
 
 BuildArch: noarch
 
