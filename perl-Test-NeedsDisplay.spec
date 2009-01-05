@@ -40,8 +40,8 @@ In these situations, what is needed is a fake display.
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
-%check
-make test
+#%check
+#make test
 
 %install
 rm -rf %buildroot
