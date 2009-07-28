@@ -1,25 +1,23 @@
+%define upstream_name    Test-NeedsDisplay
+%define upstream_version 1.07
 
-%define realname   Test-NeedsDisplay
-%define version    1.07
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Ensure that tests needing a display have one
-Source:     http://www.cpan.org/modules/by-module/Test/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(File::Spec)
 BuildRequires: perl(Test::More)
 BuildRequires: x11-server-xvfb
-Requires: x11-server-xvfb
-
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+Requires: x11-server-xvfb
 
 %description
 When testing GUI applications, sometimes applications or modules absolutely
@@ -34,7 +32,7 @@ it can be loaded to find a version.
 In these situations, what is needed is a fake display.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -55,5 +53,4 @@ rm -rf %buildroot
 %doc README LICENSE Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 
