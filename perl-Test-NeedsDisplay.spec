@@ -3,7 +3,7 @@
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	6
+Release:	7
 
 Summary:	Ensure that tests needing a display have one
 License:	GPL+ or Artistic
