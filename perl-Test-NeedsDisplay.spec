@@ -8,7 +8,7 @@ Release:	10
 Summary:	Ensure that tests needing a display have one
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Test/%{modname}-%{modver}.tar.gz
 
 BuildRequires:	perl(inc::Module::Install)
