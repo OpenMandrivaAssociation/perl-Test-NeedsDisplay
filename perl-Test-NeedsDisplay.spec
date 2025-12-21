@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Test/%{modname}-%{modver}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl(inc::Module::Install)
 BuildRequires:	perl-devel
 BuildRequires:	perl(ExtUtils::MakeMaker)
