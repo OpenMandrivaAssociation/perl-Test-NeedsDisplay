@@ -2,14 +2,14 @@
 %define modver	1.07
 
 Name:		perl-%{modname}
-Version:	%{perl_convert_version %{modver}}
-Release:	10
+Version:	%{modver}
+Release:	11
 
 Summary:	Ensure that tests needing a display have one
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Test/%{modname}-%{modver}.tar.gz
+Url:		https://metacpan.org/dist/Test-NeedsDisplay
+Source0:	https://cpan.metacpan.org/authors/id/A/AD/ADAMK/Test-NeedsDisplay-%{modver}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl(inc::Module::Install)
